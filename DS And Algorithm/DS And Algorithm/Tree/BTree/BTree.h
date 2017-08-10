@@ -1,16 +1,5 @@
 #pragma once
-
-#include <iostream>
-using namespace std;
-
-#include <queue>
-
-#define FREE_PTR(ptr)\
-if(ptr)\
-{\
-    free(ptr);\
-    ptr = nullptr;\
-}
+#include "../../Common/Common.h"
 
 static const int InvalidValue = -1;
 

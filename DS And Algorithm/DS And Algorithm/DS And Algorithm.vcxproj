@@ -113,6 +113,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Common\Common.h" />
+    <ClInclude Include="Common\Debug.h" />
     <ClInclude Include="Tree\BTree\BTree.h" />
   </ItemGroup>
   <ItemGroup>

@@ -37,7 +37,7 @@ void BTree::DestroyTree(BTreeNode* &node)
 		DestroyTree(node->Left);
 		DestroyTree(node->Right);
 
-		FREE_PTR(node);
+		SAFE_FREE_PTR(node);
 	}
 }
 
@@ -45,7 +45,7 @@ void BTree::PreOrder(BTreeNode* node)
 {
 	if (node)
 	{
-		cout << node->Val << " ";
+		Debug::Print(to_string(node->Val) + " ");
 
 		PreOrder(node->Left);
 		PreOrder(node->Right);
@@ -58,7 +58,7 @@ void BTree::InOrder(BTreeNode* node)
 	{
 		InOrder(node->Left);
 
-		cout << node->Val << " ";
+		Debug::Print(to_string(node->Val) + " ");
 
 		InOrder(node->Right);
 	}
@@ -71,7 +71,7 @@ void BTree::PostOrder(BTreeNode* node)
 		PostOrder(node->Left);
 		PostOrder(node->Right);
 
-		cout << node->Val << " ";
+		Debug::Print(to_string(node->Val) + " ");
 	}
 }
 
@@ -86,8 +86,8 @@ void BTree::LevelOrder()
 		BTreeNode* node = nodeQueue.front();
 		nodeQueue.pop();
 
-		cout << node->Val << " ";
-		
+		Debug::Print(to_string(node->Val) + " ");
+
 		if (node->Left)
 		{
 			nodeQueue.push(node->Left);

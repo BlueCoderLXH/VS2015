@@ -11,26 +11,25 @@ int main()
 
 	BTree btree(values);
 
-	cout << "Pre Order:\t";
+	Debug::Print("Pre Order:\t");
 	btree.PreOrder(btree.GetRoot());
-	cout << endl;
+	Debug::PrintLine();
 
-	cout << "In Order:\t";
+	Debug::Print("In Order:\t");
 	btree.InOrder(btree.GetRoot());
-	cout << endl;
+	Debug::PrintLine();
 
-	cout << "Post Order:\t";
+	Debug::Print("Post Order:\t");
 	btree.PostOrder(btree.GetRoot());
-	cout << endl;
+	Debug::PrintLine();
 
-	cout << "Level Order:\t";
+	Debug::Print("Level Order:\t");
 	btree.LevelOrder();
-	cout << endl;
+	Debug::PrintLine();
 
-	cout << "Height:\t\t" << btree.GetHeight(btree.GetRoot()) << endl;
-	cout << "LeafCount:\t" << btree.CountLeaf(btree.GetRoot()) << endl;
-
-	cout << "Is BST:\t\t" << (btree.IsBST(btree.GetRoot()) ? "true" : "false") << endl;
+	Debug::PrintLine("Height:\t\t" + to_string(btree.GetHeight(btree.GetRoot())));
+	Debug::PrintLine("LeafCount:\t\t" + to_string(btree.CountLeaf(btree.GetRoot())));
+	Debug::PrintLine("Is BST:\t\t" + to_string(btree.IsBST(btree.GetRoot())));
 
 	return 0;
 }

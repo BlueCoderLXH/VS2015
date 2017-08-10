@@ -18,6 +18,12 @@
     <ClInclude Include="Tree\BTree\BTree.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Common\Common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Debug.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Tree\BTree\BTree.cpp">
