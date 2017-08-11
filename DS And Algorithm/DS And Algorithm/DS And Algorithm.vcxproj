@@ -18,6 +18,12 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Priority Queue\PriorityQueue.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Priority Queue\PriorityQueue.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{459F9C7D-14F1-443E-808C-EDE594F70E57}</ProjectGuid>
     <RootNamespace>DSAndAlgorithm</RootNamespace>
@@ -112,15 +118,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="Common\Common.h" />
-    <ClInclude Include="Common\Debug.h" />
-    <ClInclude Include="Tree\BTree\BTree.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Tree\BTree\BTree.cpp" />
-    <ClCompile Include="Tree\Main.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

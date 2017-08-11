@@ -28,7 +28,7 @@ int main()
 	Debug::PrintLine();
 
 	Debug::PrintLine("Height:\t\t" + to_string(btree.GetHeight(btree.GetRoot())));
-	Debug::PrintLine("LeafCount:\t\t" + to_string(btree.CountLeaf(btree.GetRoot())));
+	Debug::PrintLine("LeafCount:\t" + to_string(btree.CountLeaf(btree.GetRoot())));
 	Debug::PrintLine("Is BST:\t\t" + to_string(btree.IsBST(btree.GetRoot())));
 
 	return 0;

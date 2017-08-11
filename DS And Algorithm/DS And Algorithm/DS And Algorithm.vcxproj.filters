@@ -15,21 +15,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Tree\BTree\BTree.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Common\Common.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Common\Debug.h">
+    <ClInclude Include="Priority Queue\PriorityQueue.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Tree\BTree\BTree.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Tree\Main.cpp">
+    <ClCompile Include="Priority Queue\PriorityQueue.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
