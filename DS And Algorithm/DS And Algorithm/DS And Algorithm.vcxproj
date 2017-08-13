@@ -23,6 +23,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Priority Queue\PriorityQueue.cpp" />
+    <ClCompile Include="Priority Queue\Test.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{459F9C7D-14F1-443E-808C-EDE594F70E57}</ProjectGuid>

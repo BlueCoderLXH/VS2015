@@ -23,5 +23,8 @@
     <ClCompile Include="Priority Queue\PriorityQueue.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Priority Queue\Test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

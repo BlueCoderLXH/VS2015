@@ -1,5 +1,4 @@
 #include "PriorityQueue.h"
-#include "../Common/Common.h"
 
 PriorityQueue::PriorityQueue(uint capacity)
 {
@@ -29,7 +28,7 @@ PriorityQueue::~PriorityQueue()
 
 void PriorityQueue::MakeEmpty()
 {
-	for (int i = 0; i < m_size; i++)
+	for (uint i = 0; i < m_size; i++)
 	{
 		m_elements[i] = MinTypeData;
 	}
@@ -53,7 +52,7 @@ void PriorityQueue::Destroy()
 
 bool PriorityQueue::IsEmpty()
 {
-	return m_size = 0;
+	return m_size == 0u;
 }
 
 bool PriorityQueue::IsFull()
@@ -85,6 +84,29 @@ void PriorityQueue::DeleteMin()
 		Debug::Log("Priority Queue is empty!");
 		return;
 	}
+
+	ElementType lastElement = m_elements[m_size--];
+
+	uint i, child;
+	for (i = RootIndex; i * 2 < m_size; i = child)
+	{
+		child = i * 2;
+		if (child + 1 < m_size && m_elements[child + 1] < m_elements[child])
+		{
+			child++;
+		}
+
+		if (lastElement > m_elements[child])
+		{
+			m_elements[i] = m_elements[child];
+		}
+		else
+		{
+			break;
+		}
+	}
+
+	m_elements[i] = lastElement;
 }
 
 ElementType PriorityQueue::FindMin()

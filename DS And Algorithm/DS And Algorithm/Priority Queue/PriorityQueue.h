@@ -1,4 +1,6 @@
 #pragma once
+#include "../Common/Common.h"
+
 typedef unsigned int uint;
 typedef int ElementType;
 
@@ -41,8 +43,22 @@ public:
 
 	/*
 	    删除算法思想(下滤策略):
+		删除树根节点, 获取尾节点tail, 每次获得当前根节点root的孩子节点中较小的一个minChild,
+	并与tail节点比较, 如果小之, child节点放到root节点上; child作为下一层的根节点, 继续上诉
+	操作, 直至tail节点小于minChild节点
 	*/
 	void DeleteMin();
 
 	ElementType FindMin();
+
+	string ToString()
+	{
+		string ret = "";
+		for (uint i = RootIndex; i <= m_size; i++)
+		{
+			ret += to_string(m_elements[i]) + " ";
+		}
+
+		return ret;
+	}
 };
